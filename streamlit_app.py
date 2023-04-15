@@ -13,7 +13,7 @@ def extract_text(file):
 def summarize(api_key, document):
     openai.api_key = api_key
     response = openai.Completion.create(
-        engine="davinci-codex",
+        engine="davinci",
         prompt=f"Please summarize the following document:\n\n{document}\n",
         max_tokens=100,
         n=1,
